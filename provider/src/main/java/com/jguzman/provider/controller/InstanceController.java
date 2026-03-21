@@ -17,8 +17,9 @@ public class InstanceController {
     private final String instanceUUID = java.util.UUID.randomUUID().toString();
 
     @GetMapping
-    public String getInstanceInfo(){
+    public String getInstanceInfo() throws InterruptedException {
         log.info("===>> Calling getInstance from /api/instance");
+        //Thread.sleep(10000);
         return "Getting data from server port " + serverPort + " and UUID Instance " + instanceUUID;
     }
 }
