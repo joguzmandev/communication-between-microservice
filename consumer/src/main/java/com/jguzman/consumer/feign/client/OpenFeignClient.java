@@ -1,4 +1,4 @@
-package com.jguzman.feign.client;
+package com.jguzman.consumer.feign.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

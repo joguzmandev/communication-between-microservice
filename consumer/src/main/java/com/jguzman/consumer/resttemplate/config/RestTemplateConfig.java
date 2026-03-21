@@ -1,4 +1,4 @@
-package com.jguzman.consumer.config;
+package com.jguzman.consumer.resttemplate.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

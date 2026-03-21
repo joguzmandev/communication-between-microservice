@@ -1,14 +1,11 @@
-package com.jguzman.consumer.controller;
+package com.jguzman.consumer.resttemplate.controller;
 
-import com.jguzman.consumer.service.RestTemplateClient;
+import com.jguzman.consumer.resttemplate.service.RestTemplateClient;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
-
-import java.net.http.HttpTimeoutException;
 
 @Slf4j
 @RestController
