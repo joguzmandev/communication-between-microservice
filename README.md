@@ -8,7 +8,7 @@ El objetivo es mostrar las distintas alternativas, sus ventajas, desventajas y c
 
 ## 🚀 Tecnologías utilizadas
 
-- Java 17+
+- Java 21
 - Spring Boot
 - Spring Web
 - Spring WebFlux
@@ -36,7 +36,7 @@ En este proyecto se implementan tres enfoques principales:
 private RestTemplate restTemplate;
 
 public String getData() {
-    return restTemplate.getForObject("http://localhost:8081/api/data", String.class);
+    return restTemplate.getForObject("http://localhost:8081/api/instance", String.class);
 }
 ```
 
@@ -61,7 +61,7 @@ public String getData() {
 RestClient restClient = RestClient.create();
 
 String response = restClient.get()
-    .uri("http://localhost:8081/api/data")
+    .uri("http://localhost:8081/api/instance")
     .retrieve()
     .body(String.class);
 ```
@@ -84,7 +84,7 @@ String response = restClient.get()
 #### Ejemplo:
 
 ```java
-WebClient webClient = WebClient.create("http://localhost:8081");
+WebClient webClient = WebClient.create("http://localhost:8081/api/instance");
 
 Mono<String> response = webClient.get()
     .uri("/api/data")
@@ -114,10 +114,9 @@ Mono<String> response = webClient.get()
 ## 📁 Estructura del proyecto
 
 ```
-src/
- ├── resttemplate/
- ├── restclient/
- └── webclient/
+communication-between-microservice/
+ ├── consumer/**
+ ├── provider/
 ```
 
 ---
@@ -127,7 +126,7 @@ src/
 1. Clonar el repositorio:
 
 ```bash
-git clone https://github.com/tu-repo/comunicacion-servicios.git
+git clone https://github.com/joguzmandev/communication-between-microservice.git
 ```
 
 2. Ejecutar el proyecto:
